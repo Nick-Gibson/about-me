@@ -34,3 +34,19 @@ if (answer3 === 'Y' || answer3 === 'YES' || answer3 === 'YAR') {
 } else {
   alert('Ye truly are a lowly, wretched cur. Turn down the rum!?');
 }
+
+var answer4 = prompt('Can this pirate code?').toUpperCase();
+
+if (answer4 === 'Y' || answer4 === 'YES' || answer4 === 'YAR') {
+  alert('Tis true! Our servers are colocated in Tortuga');
+} else {
+  alert('Haaar, have ye so little faith? I may make me mark wit\' an X, but I type by touch!');
+}
+
+var answer5 = prompt('Arrr, do I treat every day as Talk Like A Pirate Day, whether th\' season be foul or fair?').toUpperCase();
+
+if (answer5 === 'N' || answer5 === 'NO' || answer5 === 'NAY') {
+  alert('You\'re right! Thank goodness, that would be exhausting for all involved');
+} else {
+  alert('I appreciate your faith in my commitment to a bit, but no way, come on, that\'d be super annoying.');
+}
