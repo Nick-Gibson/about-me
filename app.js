@@ -6,12 +6,13 @@
 // Use CSS to style your page as you see fit, to the level of abilities in CSS that you currently have
 // Add, Commit, Push process is being followed; it is evident in GitHub that commits are made regularly, and with good commit messages that explain the WHY of the commit.
 
-var userName = prompt('Arrrrr, hallo thar! Tis talk like a pirate dayyyyyy! What be yer name!?')
+var userName = prompt('Arrrrr, hallo thar! Tis talk like a pirate dayyyyyy! What be yer name!?');
 
-alert('Ahoy, ' + userName + ', I can see ye be a landlubber of the wretchedest sort. See if ye can answer me riddles about my life pirating on the high seas!')
+alert('Ahoy, ' + userName + ', I can see ye be a landlubber of the wretchedest sort. See if ye can answer me riddles about my life pirating on the high seas!');
+console.log('userName value is' + userName);
 
-//Q1
 var answer1 = prompt('Do I pillage according to a code of conduct!?').toUpperCase();
+console.log('answer1 value is' + answer1);
 
 if (answer1 === 'N' || answer1 === 'NO'  || answer1 === 'NAY') {
   alert('Haaar! Ye be wise - we pillage as we please!');
@@ -20,6 +21,8 @@ if (answer1 === 'N' || answer1 === 'NO'  || answer1 === 'NAY') {
 }
 
 var answer2 = prompt('Does my ship o\' thee damned have a mascot?').toUpperCase();
+console.log('answer2 value is' + answer2);
+
 
 if (answer2 === 'Y' || answer2 === 'YES' || answer2 === 'YAR') {
   alert('Ho ho! How did ye know about our feline, Sir Royal Brougham, scourge of every rodent from bow to stern!?');
@@ -28,6 +31,7 @@ if (answer2 === 'Y' || answer2 === 'YES' || answer2 === 'YAR') {
 }
 
 var answer3 = prompt('Arrr, am I havin\' more rum?').toUpperCase();
+console.log('answer3 value is' + answer3);
 
 if (answer3 === 'Y' || answer3 === 'YES' || answer3 === 'YAR') {
   alert('HOW COULD THERE BE ANY OTHER ANSWER, ME MATEY?');
@@ -36,6 +40,7 @@ if (answer3 === 'Y' || answer3 === 'YES' || answer3 === 'YAR') {
 }
 
 var answer4 = prompt('Can this pirate code?').toUpperCase();
+console.log('answer4 value is' + answer4);
 
 if (answer4 === 'Y' || answer4 === 'YES' || answer4 === 'YAR') {
   alert('Tis true! Our servers are colocated in Tortuga');
@@ -44,6 +49,7 @@ if (answer4 === 'Y' || answer4 === 'YES' || answer4 === 'YAR') {
 }
 
 var answer5 = prompt('Arrr, do I treat every day as Talk Like A Pirate Day, whether th\' season be foul or fair?').toUpperCase();
+console.log('answer5 value is' + answer5);
 
 if (answer5 === 'N' || answer5 === 'NO' || answer5 === 'NAY') {
   alert('You\'re right! Thank goodness, that would be exhausting for all involved');
