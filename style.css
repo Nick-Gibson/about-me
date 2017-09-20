@@ -1,3 +1,25 @@
-* {
-  color:red
+body {
+  background-color: F5F5F5;
+  color: #778899;
+}
+
+header {
+  background-color: 00ff7f;
+  font-family: sans-serif;
+  border-width: medium;
+  justify-content: center;
+}
+
+footer {
+  background-color: 00FF7F;
+  font-family: sans-serif;
+  font-size: 50%
+}
+
+h3 {
+  color:black;
+  font-style:italic;
+  border:40px;
+  border-color:black;
+  opacity:.75;
 }

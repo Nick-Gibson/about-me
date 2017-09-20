@@ -1,58 +1,64 @@
 'use strict';
 
-// Design a guessing game about you that involves FIVE yes/no questions. Be creative and fun and whimsical. Or not. It's up to you! It's your project!
-// The questions in the guessing game must require a mix of yes/no answers, and user input must accept either y/n or yes/no responses, with either .toUpperCase() or .toLowerCase() used to validate the user input and accommodate users entering all-caps Y/N or YES/NO answers, too.
-// Useful and descriptive console.log() messages in the JS are well written and correctly displaying to the browser console for each question of the guessing game.
-// Use CSS to style your page as you see fit, to the level of abilities in CSS that you currently have
-// Add, Commit, Push process is being followed; it is evident in GitHub that commits are made regularly, and with good commit messages that explain the WHY of the commit.
+var userName = prompt('Why hello there! This is Nick\'s about-me page. What\'s your name, stranger?');
+var correctAnswers = 0;
 
-var userName = prompt('Arrrrr, hallo thar! Tis talk like a pirate dayyyyyy! What be yer name!?');
-
-alert('Ahoy, ' + userName + ', I can see ye be a landlubber of the wretchedest sort. See if ye can answer me riddles about my life pirating on the high seas!');
+alert('Well ahoy-hoy, ' + userName + '! Since you\'re here, how about we play a quick guessing game by way of introduction? Please answer the next few questions with yes or no.');
 console.log('userName value is', userName);
 
-var answer1 = prompt('Do I pillage according to a code of conduct!?').toUpperCase();
+var answer1 = prompt('Do I live my life according to a code of morality and ethics?').toUpperCase();
 console.log('answer1 value is', answer1);
 
-if (answer1 === 'N' || answer1 === 'NO' || answer1 === 'NAY') {
-  alert('Haaar! Ye be wise - we pillage as we please!');
+if (answer1 === 'N' || answer1 === 'NO') {
+  alert('I spent far too much time in introspective inflection for that to be true, sadly.');
 } else {
-  alert('Ah ha ha ha, nay, you may wish it true to save yer hide, but our morals are as thin as our daily grog!');
+  alert('While you\'re correct, it\'s a pretty thin one when\'s all said and done, and it\'s easily defeated by decent whiskey. [CORRECT]');
+  correctAnswers++;
 }
 
-var answer2 = prompt('Does my ship o\' thee damned have a mascot?').toUpperCase();
+var answer2 = prompt('Do I have a mascot?').toUpperCase();
 console.log('answer2 value is', answer2);
 
-
 if (answer2 === 'Y' || answer2 === 'YES' || answer2 === 'YAR') {
-  alert('Ho ho! How did ye know about our feline, Sir Royal Brougham, scourge of every rodent from bow to stern!?');
+  alert('Yea! He\'s an obnoxious little cat named Brougham who regularly misses me while I\'m at class. [CORRECT]');
+  correctAnswers++;
 } else {
-  alert('Yer dry feet lead you astray; all pirate ships need t\' have the proper compliment of a frightening menagerie!');
+  alert('That would be sad and lonely; that\'s why I have a cat named Brougham!');
 }
 
-var answer3 = prompt('Arrr, am I havin\' more rum?').toUpperCase();
+var answer3 = prompt('More whiskey?').toUpperCase();
 console.log('answer3 value is', answer3);
 
-if (answer3 === 'Y' || answer3 === 'YES' || answer3 === 'YAR') {
-  alert('HOW COULD THERE BE ANY OTHER ANSWER, ME MATEY?');
+if (answer3 === 'Y' || answer3 === 'YES') {
+  alert('HOO BOY YOU BETTER BELIEVE IT! [CORRECT]');
+  correctAnswers++;
 } else {
-  alert('Ye truly are a lowly, wretched cur. Turn down the rum!?');
+  alert('I mean, I guess I\'m good for now, sure. :-/');
 }
 
-var answer4 = prompt('Can this pirate code?').toUpperCase();
+var answer4 = prompt('Can I code?').toUpperCase();
 console.log('answer4 value is', answer4);
 
-if (answer4 === 'Y' || answer4 === 'YES' || answer4 === 'YAR') {
-  alert('Tis true! Our servers are colocated in Tortuga.');
+if (answer4 === 'Y' || answer4 === 'YES') {
+  alert('And with increasing skill each day! [CORRECT]');
+  correctAnswers++;
 } else {
-  alert('Haaar, have ye so little faith? I may make me mark wit\' an X, but I type by touch!');
+  alert('I know I\'m new at this, but have a little faith in me, sheesh.');
 }
 
-var answer5 = prompt('Arrr, do I treat every day as Talk Like A Pirate Day, whether th\' season be foul or fair?').toUpperCase();
+var answer5 = prompt('Will you high-five me?').toUpperCase();
 console.log('answer5 value is', answer5);
 
-if (answer5 === 'N' || answer5 === 'NO' || answer5 === 'NAY') {
-  alert('You\'re right! Thank goodness, that would be exhausting for all involved');
+if (answer5 === 'N' || answer5 === 'NO') {
+  alert('Hey com\'on don\'t leave men hanging here!');
 } else {
-  alert('I appreciate your faith in my commitment to a bit, but no way, come on, that\'d be super annoying.');
+  alert('Yeah buddy I knew we\'d get along, let\'s party! [CORRECT]');
+  correctAnswers++;
 }
+console.log('number of correct answers:', correctAnswers);
+// //As a developer, I want to add a sixth question to my guessing game that takes numeric input by prompting a user to guess a number (for instance, "What is my favorite number?" or "How many Pokémon did I catch yesterday?"), and indicates to the user whether the guess is 'too high' or 'too low', and gives the user exactly four opportunities to get the correct answer, so that my fancy programming skills are showcased.
+// As a developer, I want to add a seventh question to my guessing game that has multiple possible correct answers that are stored in an array. For instance, "Can you guess a state that I have lived in besides Washington?", so that even more of my programming skills are showcased. For now, I will structure this question so that the user has six tries to get a single correct answer, and upon using up those tries OR getting a correct answer, displays a message to the user indicating all of the possible correct answers.
+// As a developer, I want to keep a tally of the total number of correct answers given by the user, and at the end of the game, tell the user how well they did with a personalized custom message that includes the number of correct answers and also addresses the user by name, e.g. "You got 4 out of 7 questions correct, Bobbi! Better luck next time."
+
+alert('Now a new challenge! Guess how many different pinball tables are at my favorite pinball bar, Flip Flip Ding Ding! You have four tries to get it right - I\'ll give you hints if you\'ve guessed too high or too low!');
+prompt('How many pinball tables at Flip Flip?');
