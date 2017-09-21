@@ -61,4 +61,31 @@ console.log('number of correct answers:', correctAnswers);
 // As a developer, I want to keep a tally of the total number of correct answers given by the user, and at the end of the game, tell the user how well they did with a personalized custom message that includes the number of correct answers and also addresses the user by name, e.g. "You got 4 out of 7 questions correct, Bobbi! Better luck next time."
 
 alert('Now a new challenge! Guess how many different pinball tables are at my favorite pinball bar, Flip Flip Ding Ding! You have four tries to get it right - I\'ll give you hints if you\'ve guessed too high or too low!');
-prompt('How many pinball tables at Flip Flip?');
+
+for (var i = 0; i <= 4; i++){
+  var userGuess = prompt('How many pinball tables at Flip Flip?');
+  if (userGuess == 27) {
+    alert('That\'s exactly right! 27!');
+    correctAnswers++;
+    break;
+  } else if (userGuess < 27) {
+    alert('Too few, guess higher next time! You have ' + (3 - i) + ' tries remaining.');
+  } else if (userGuess > 27) {
+    alert('I wish they had that many, but guess lower next time! You have ' + (3 - i) + ' tries remaining.');
+  } else alert('sorry, didn\'t understand that.');
+};
+
+alert('Ok, on to a new challenge! I spent time backpacking in East Asia. Name any one country I visited to score another correct answer! You have SIX tries this time.');
+var nationsVisited = ['cambodia', 'vietnam', 'philippines', 'taiwan', 'korea', 'china'];
+for (i = 0; i < + 6; i++) {
+  userGuess = prompt('Name a country I visited!').toLowerCase();
+  var guess = nationsVisited.indexOf(userGuess);
+  console.log('Guess value is', guess);
+  if (guess === -1){
+    alert('nope, did not go there.');
+  } else {
+    alert('Yeah! Went there!');
+    correctAnswers++;
+    break;
+  }
+};
