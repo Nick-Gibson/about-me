@@ -4,7 +4,7 @@ var userName = prompt('Why hello there! This is Nick\'s about-me page. What\'s y
 var correctAnswers = 0;
 
 //arrays
-var ynq = [
+var yesNoQustions = [
   ['Do I live a life devoid of meaning?',
     'N',
     'NO',
@@ -41,61 +41,61 @@ console.log('userName value is', userName);
 //first five y/n questions
 function question1(){
 
-  var answer1 = prompt(ynq[0][0]).toUpperCase();
-  console.log( ynq[0][0], answer1);
+  var answer1 = prompt(yesNoQustions[0][0]).toUpperCase();
+  console.log( yesNoQustions[0][0], answer1);
 
-  if (answer1 === ynq[0][1] || answer1 === ynq[0][2]){
-    alert(ynq[0][3]);
+  if (answer1 === yesNoQustions[0][1] || answer1 === yesNoQustions[0][2]){
+    alert(yesNoQustions[0][3]);
     correctAnswers++;
   } else {
-    alert(ynq[0][4]);
+    alert(yesNoQustions[0][4]);
   }
 }
 question1();
 
 function question2(){
-  var answer2 = prompt(ynq[1][0]).toUpperCase();
-  console.log(ynq[1][0], answer2);
-  if (answer2 === ynq[1][1] || answer2 === ynq[1][2] || answer2 === ynq[1][3]){
-    alert(ynq[1][4]);
+  var answer2 = prompt(yesNoQustions[1][0]).toUpperCase();
+  console.log(yesNoQustions[1][0], answer2);
+  if (answer2 === yesNoQustions[1][1] || answer2 === yesNoQustions[1][2] || answer2 === yesNoQustions[1][3]){
+    alert(yesNoQustions[1][4]);
     correctAnswers++;
   } else {
-    alert(ynq[1][5]);
+    alert(yesNoQustions[1][5]);
   }
 }
 question2();
 
 function question3(){
-  var answer3 = prompt(ynq[2][0]).toUpperCase();
-  console.log(ynq[2][0], answer3);
-  if (answer3 === ynq[2][1] || answer3 === ynw[2][2]) {
-    alert(ynq[2][3]);
+  var answer3 = prompt(yesNoQustions[2][0]).toUpperCase();
+  console.log(yesNoQustions[2][0], answer3);
+  if (answer3 === yesNoQustions[2][1] || answer3 === ynw[2][2]) {
+    alert(yesNoQustions[2][3]);
     correctAnswers++;
   } else {
-    alert(ynq[2][4]);
+    alert(yesNoQustions[2][4]);
   }
 }
 question3();
 
 function question4(){
-  var answer4 = prompt(ynq[3][0]).toUpperCase();
-  console.log(ynq[3][0], answer4);
-  if (answer4 === ynq[3][1] || answer4 === ynq[3][2]) {
-    alert(ynq[3][3]);
+  var answer4 = prompt(yesNoQustions[3][0]).toUpperCase();
+  console.log(yesNoQustions[3][0], answer4);
+  if (answer4 === yesNoQustions[3][1] || answer4 === yesNoQustions[3][2]) {
+    alert(yesNoQustions[3][3]);
     correctAnswers++;
   } else {
-    alert(ynq[3][4]);
+    alert(yesNoQustions[3][4]);
   }
 }
 question4();
 
 function question5(){
-  var answer5 = prompt(ynq[4][0]).toUpperCase();
-  console.log(ynq[4][0], answer5);
-  if (answer5 === ynq[4][1] || answer5 === ynq[4][2]) {
-    alert(ynq[4][2]);
+  var answer5 = prompt(yesNoQustions[4][0]).toUpperCase();
+  console.log(yesNoQustions[4][0], answer5);
+  if (answer5 === yesNoQustions[4][1] || answer5 === yesNoQustions[4][2]) {
+    alert(yesNoQustions[4][2]);
   } else {
-    alert(ynq[4][3]);
+    alert(yesNoQustions[4][3]);
     correctAnswers++;
   }
 }
