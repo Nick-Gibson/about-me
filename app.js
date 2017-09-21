@@ -3,65 +3,99 @@
 var userName = prompt('Why hello there! This is Nick\'s about-me page. What\'s your name, stranger?');
 var correctAnswers = 0;
 
+//arrays
+var ynq = [
+  ['Do I live a life devoid of meaning?',
+    'N',
+    'NO',
+    'Not to get all existential, but the only thing that gives me meaning is LEARNING JAVASCRIPT (for the next few months, at least) [CORRECT]',
+    'Wow jeez, come on, it\'s only question one, I\'m not gonna get all dark and gothy on you already, of course I do!',],
+  ['Do I have a mascot?',
+    'Y',
+    'YES',
+    'YAR',
+    'Yea! He\'s an obnoxious little cat named Brougham who regularly misses me while I\'m at class. [CORRECT]',
+    'That would be sad and lonely; that\'s why I have a cat named Brougham!'],
+  ['More whiskey?',
+    'Y',
+    'YES',
+    'HOO BOY YOU BETTER BELIEVE IT! [CORRECT]',
+    'I mean, I guess I\'m good for now, sure. But if you know me, you know the answer\'s yes.'],
+  ['Can I code?',
+    'Y',
+    'YES',
+    'And with increasing skill each day! [CORRECT]',
+    'I know I\'m new at this, but have a little faith in me, sheesh.'],
+  ['Will you high-five me?',
+    'Y',
+    'YES',
+    'Hey com\'on don\'t leave me hanging here!',
+    'Yeah buddy! I knew we\'d get along, let\'s party! [CORRECT]']
+];
+
+// end arrays
+
+
 alert('Well ahoy-hoy, ' + userName + '! Since you\'re here, how about we play a quick guessing game by way of introduction? Please answer the next few questions with yes or no.');
 console.log('userName value is', userName);
 //first five y/n questions
 function question1(){
-  var answer1 = prompt('Do I live a life devoid of meaning?').toUpperCase();
-  console.log('answer1 value is', answer1);
 
-  if (answer1 === 'N' || answer1 === 'NO') {
-    alert('Not to get all existential, but the only thing that gives me meaning is LEARNING JAVASCRIPT (for the next few months, at least) [CORRECT]');
+  var answer1 = prompt(ynq[0][0]).toUpperCase();
+  console.log( ynq[0][0], answer1);
+
+  if (answer1 === ynq[0][1] || answer1 === ynq[0][2]){
+    alert(ynq[0][3]);
     correctAnswers++;
   } else {
-    alert('Wow jeez, come on, it\'s only question one, I\'m not gonna get all dark and gothy on you already, of course I do!');
+    alert(ynq[0][4]);
   }
 }
 question1();
 
 function question2(){
-  var answer2 = prompt('Do I have a mascot?').toUpperCase();
-  console.log('answer2 value is', answer2);
-  if (answer2 === 'Y' || answer2 === 'YES' || answer2 === 'YAR') {
-    alert('Yea! He\'s an obnoxious little cat named Brougham who regularly misses me while I\'m at class. [CORRECT]');
+  var answer2 = prompt(ynq[1][0]).toUpperCase();
+  console.log(ynq[1][0], answer2);
+  if (answer2 === ynq[1][1] || answer2 === ynq[1][2] || answer2 === ynq[1][3]){
+    alert(ynq[1][4]);
     correctAnswers++;
   } else {
-    alert('That would be sad and lonely; that\'s why I have a cat named Brougham!');
+    alert(ynq[1][5]);
   }
 }
 question2();
 
 function question3(){
-  var answer3 = prompt('More whiskey?').toUpperCase();
-  console.log('answer3 value is', answer3);
-  if (answer3 === 'Y' || answer3 === 'YES') {
-    alert('HOO BOY YOU BETTER BELIEVE IT! [CORRECT]');
+  var answer3 = prompt(ynq[2][0]).toUpperCase();
+  console.log(ynq[2][0], answer3);
+  if (answer3 === ynq[2][1] || answer3 === ynw[2][2]) {
+    alert(ynq[2][3]);
     correctAnswers++;
   } else {
-    alert('I mean, I guess I\'m good for now, sure. But if you know me, you know the answer\'s yes.');
+    alert(ynq[2][4]);
   }
 }
 question3();
 
 function question4(){
-  var answer4 = prompt('Can I code?').toUpperCase();
-  console.log('answer4 value is', answer4);
-  if (answer4 === 'Y' || answer4 === 'YES') {
-    alert('And with increasing skill each day! [CORRECT]');
+  var answer4 = prompt(ynq[3][0]).toUpperCase();
+  console.log(ynq[3][0], answer4);
+  if (answer4 === ynq[3][1] || answer4 === ynq[3][2]) {
+    alert(ynq[3][3]);
     correctAnswers++;
   } else {
-    alert('I know I\'m new at this, but have a little faith in me, sheesh.');
+    alert(ynq[3][4]);
   }
 }
 question4();
 
 function question5(){
-  var answer5 = prompt('Will you high-five me?').toUpperCase();
-  console.log('answer5 value is', answer5);
-  if (answer5 === 'N' || answer5 === 'NO') {
-    alert('Hey com\'on don\'t leave me hanging here!');
+  var answer5 = prompt(ynq[4][0]).toUpperCase();
+  console.log(ynq[4][0], answer5);
+  if (answer5 === ynq[4][1] || answer5 === ynq[4][2]) {
+    alert(ynq[4][2]);
   } else {
-    alert('Yeah buddy! I knew we\'d get along, let\'s party! [CORRECT]');
+    alert(ynq[4][3]);
     correctAnswers++;
   }
 }
